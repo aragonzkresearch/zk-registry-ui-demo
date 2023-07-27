@@ -1,0 +1,37 @@
+{
+	"name": "zkreg-clientlib",
+	"type": "module",
+	"version": "0.0.1",
+	"description": "zkreg clientlib",
+	"main": "./src/main.js",
+	"module": "./src/main.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"postinstall": "[ ! -d node_modules ] || [ -d node_modules/ovote ] || (cd node_modules && git clone https://github.com/aragonzkresearch/ovote.git && rm -rf .git && cd ovote/circuits && npm install && cd ../../../webtest && bash prepare-files.sh)",
+		"pretest": "mkdir -p test/circuits",
+		"test": "npx hardhat test"
+	},
+	"author": "AragonZKResearch",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"axios": "^1.3.4",
+		"circom_runtime": "0.1.22",
+		"ethers": "^5.5.3",
+		"blake-hash": "^2.0.0",
+		"ffjavascript": "^0.2.57"
+	},
+	"devDependencies": {
+		"@nomicfoundation/hardhat-toolbox": "^2.0.1",
+		"@nomiclabs/hardhat-ethers": "^2.0.4",
+		"browserify": "^16.5.0",
+		"chai": "^4.3.4",
+		"circom_tester": "0.0.19",
+		"circomlib": "^2.0.5",
+		"circomlibjs": "0.1.7",
+		"hardhat": "^2.13.0-esm.1",
+		"mocha": "^9.1.2",
+		"snarkjs": "0.5.0"
+	}
+}

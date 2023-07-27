@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  //background-image: url("/big_bg_beta.jpg");
+  background-image: url("/big_bg.webp");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #23002A;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+  //scrollbar-color: var(--secondary) var(--primary);
+  scrollbar-color: indigo;
+}
+
+.bg-orange-100 {
+	background-color: rgb(255 237 213);
+}
+
+.text-orange-800 {
+	color: rgb(154 52 18);
+}
+
+.bg-blue-100 {
+	background-color: rgb(219 234 254);
+}
+
+.text-blue-800 {
+	color: rgb(30 64 175);
+}
+
+.bg-red-100 {
+	background-color: rgb(254 226 226);
+}
+
+.text-red-800 {
+	color: rgb(153 27 27);
+}
+
+.bg-green-100 {
+	background-color: rgb(220 252 231);
+}
+
+.text-green-800 {
+	color: rgb(22 101 52);
+}
+
+.blink_me {
+  animation: blinker 0.5s linear 5;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+  }
+  h3 {
+    color: white;
+  }
+}
